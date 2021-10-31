@@ -85,13 +85,13 @@ namespace The_Best_Leaque_Scorers
 				Select(s => s.NameandSurname);
 		}
 
-		public IEnumerable<string> GetLeaquesNames(IEnumerable<int> idLeaques)
+		public IEnumerable<string> GetLeaquesNames(IEnumerable<int> idLeaque)
 		{
-			if (idLeaques == null)
+			if (idLeaque == null)
 			{
 				return Enumerable.Empty<string>();
 			}
-			return scorersandLeaques.Leaques.Where(l => idLeaques.Any(id => id == l.ID)).
+			return scorersandLeaques.Leaques.Where(l => idLeaque.Any(id => id == l.ID)).
 				Select(l => l.Nation);
 		}
 	}

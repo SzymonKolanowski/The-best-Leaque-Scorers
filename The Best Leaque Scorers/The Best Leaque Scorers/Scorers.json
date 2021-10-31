@@ -1,4 +1,13 @@
 {
   "Scorers": [],
-  "Leaques": []
+  "Leaques": [
+    {
+      "ID": 1,
+      "Nation": "Poland"
+    },
+    {
+      "ID": 2,
+      "Nation": "Germany"
+    }
+  ]
 }

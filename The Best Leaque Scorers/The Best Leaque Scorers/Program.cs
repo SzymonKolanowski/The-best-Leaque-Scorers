@@ -44,12 +44,12 @@ namespace The_Best_Leaque_Scorers
 					case "ShowScorer":
 						ShowScorer();
 						break;
-					//case "AddLeaquetoScorer":
-					//	AddLeaquetoScorer();
-					//	break;
+					case "AddLeaquetoScorer":
+						AddLeaquetoScorer();
+						break;
 					//case "RemoveLeaqueFromScorerList":
 					//	RemoveLeaqueFromScorerList();
-						break;
+					//break;
 					case "AddLeaque":
 						AddLeaques();
 						break;
@@ -130,9 +130,9 @@ namespace The_Best_Leaque_Scorers
 
 			Scorer scorer = database.GetScorerById(idscorer);
 
-			Goal goal = 
-			
-			var leaques = database.GetLeaquesNames();
+			//Goal goal = 
+
+			var leaques = database.GetLeaquesNames(scorer.LeaqueId);
 
 			var scorerViewModel = new
 			{
@@ -140,7 +140,7 @@ namespace The_Best_Leaque_Scorers
 				scorer.NameandSurname,
 				scorer.Nation,
 				scorer.YearofBirth,
-				//LeaqueNames = leaques
+				LeaqueNames = leaques
 			};
 
 			WriteJson(scorerViewModel);
@@ -187,21 +187,24 @@ namespace The_Best_Leaque_Scorers
 			WriteJson(leaqueViewModel);
 		}
 
-		//private static void AddLeaquetoScorer()
-		//{
-		//	Console.WriteLine("choose id of scorer");
-		//	var idScorer = GetIntParameter();
+		private static void AddLeaquetoScorer()
+		{
+			Console.WriteLine("choose id of scorer");
+			var idScorer = GetIntParameter();
 
-		//	Console.WriteLine("choose id of leaque");
-		//	var idLeaque = GetIntParameter();
+			Console.WriteLine("choose id of leaque");
+			var idLeaque = GetIntParameter();
 
-		//	Console.WriteLine("Goals in this Leaque");
-		//	var goals = GetIntParameter();
+			Console.WriteLine("Goals in this Leaque");
+			var goals = GetIntParameter();
 
-		//	var scorer = database.GetScorerById(idScorer);
-		//	scorer.LeaqueIds ??= new List<int>();
-		//	scorer.LeaqueIds.Add(idLeaque);
-		//}
+			var scorer = database.GetScorerById(idScorer);
+			scorer.LeaqueId ??= new List<int>();
+			scorer.LeaqueId.Add(idLeaque);
+
+			scorer.NumberOfGoals ??= new List<int>();
+			scorer.NumberOfGoals.Add(goals);
+		}
 
 		//private static void AddScorertoLeaque()
 		//{
