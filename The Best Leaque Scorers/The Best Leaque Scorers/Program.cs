@@ -132,7 +132,7 @@ namespace The_Best_Leaque_Scorers
 
 			//Goal goal = 
 
-			var leaques = database.GetLeaquesNames(scorer.LeaqueId);
+			//var leaques = database.GetLeaquesNames(scorer.LeaqueId);
 
 			var scorerViewModel = new
 			{
@@ -140,7 +140,7 @@ namespace The_Best_Leaque_Scorers
 				scorer.NameandSurname,
 				scorer.Nation,
 				scorer.YearofBirth,
-				LeaqueNames = leaques
+				//LeaqueNames = leaques
 			};
 
 			WriteJson(scorerViewModel);
@@ -198,12 +198,12 @@ namespace The_Best_Leaque_Scorers
 			Console.WriteLine("Goals in this Leaque");
 			var goals = GetIntParameter();
 
-			var scorer = database.GetScorerById(idScorer);
-			scorer.LeaqueId ??= new List<int>();
-			scorer.LeaqueId.Add(idLeaque);
+			var goal = database.GetScorerById(idScorer);
+			goal.LeaqueId ??= new List<int>();
+			goal.LeaqueId.Add(idLeaque);
 
-			scorer.NumberOfGoals ??= new List<int>();
-			scorer.NumberOfGoals.Add(goals);
+			//scorer.NumberOfGoals ??= new List<int>();
+			//scorer.NumberOfGoals.Add(goals);
 		}
 
 		//private static void AddScorertoLeaque()
