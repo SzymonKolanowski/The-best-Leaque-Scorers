@@ -198,9 +198,10 @@ namespace The_Best_Leaque_Scorers
 			Console.WriteLine("Goals in this Leaque");
 			var goals = GetIntParameter();
 
-			var goal = database.GetScorerById(idScorer);
-			goal.LeaqueId ??= new List<int>();
-			goal.LeaqueId.Add(idLeaque);
+			var scorer = database.GetScorerById(idScorer);
+			scorer.g
+			//scorer.LeaqueId ??= new List<int>();
+			//scorer.LeaqueId.Add(idLeaque);
 
 			//scorer.NumberOfGoals ??= new List<int>();
 			//scorer.NumberOfGoals.Add(goals);

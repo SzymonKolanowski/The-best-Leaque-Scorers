@@ -10,6 +10,13 @@ namespace The_Best_Leaque_Scorers
 		public string NameandSurname { get; set; }
 		public int YearofBirth { get; set; }
 		public string Nation { get; set; }
+
+		//public Scorer()
+		//{
+		//	public int LeaqueId { get; set; }
+		//}
+
+
 	}
 
 	public class Leaque
@@ -18,12 +25,18 @@ namespace The_Best_Leaque_Scorers
 		public string Nation { get; set; }				
 	}
 
+	//public class Goal
+	//{
+	//	public List <int> ScorerId { get; set; }
+	//	public List <int> LeaqueId { get; set; }
+	//	public List <int> NumberOfGoal { get; set; }
+	//}
+
 	public class Goal
 	{
-		public List <int> ScorerId { get; set; }
-		public List <int> LeaqueId { get; set; }
-		public List <int> NumberOfGoal { get; set; }
+		public int ScorerId { get; set; }
+		public int LeaqueId { get; set; }
+		public int NumberOfGoal { get; set; }
 	}
-
 
 }
