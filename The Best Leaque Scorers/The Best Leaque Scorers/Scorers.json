@@ -1,5 +1,12 @@
 {
-  "Scorers": [],
+  "Scorers": [
+    {
+      "ID": 1,
+      "NameandSurname": "Robert Lewandowski",
+      "YearofBirth": 1988,
+      "Nation": "Poland"
+    }
+  ],
   "Leaques": [
     {
       "ID": 1,

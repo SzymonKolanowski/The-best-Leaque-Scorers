@@ -11,13 +11,14 @@ namespace The_Best_Leaque_Scorers
 		public int YearofBirth { get; set; }
 		public string Nation { get; set; }
 
-		//public Scorer()
-		//{
-		//	public int LeaqueId { get; set; }
-		//}
-
-
+		public Scorer()
+		{
+			public int LeaqueId { get; set; }
+	
 	}
+
+
+}
 
 	public class Leaque
 	{
