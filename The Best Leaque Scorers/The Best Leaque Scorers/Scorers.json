@@ -16,5 +16,11 @@
       "ID": 2,
       "Nation": "Germany"
     }
+  ],
+  "Goals": [
+    {
+      "Id": null,
+      "NumberOfGoal": 32
+    }
   ]
 }

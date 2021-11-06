@@ -45,6 +45,12 @@ namespace The_Best_Leaque_Scorers
 			scorersandLeaques.Leaques.Add(leaque);
 		}
 
+		public void AddGoalId(Goal goal)
+		{
+			goal.Id = scorersandLeaques.Goals.Select(g => g.Id).DefaultIfEmpty().Max() ;
+			scorersandLeaques.Goals.Add(goal);
+		}
+
 		public void SaveScorers()
 		{
 			var json = JsonConvert.SerializeObject(scorersandLeaques, Formatting.Indented);

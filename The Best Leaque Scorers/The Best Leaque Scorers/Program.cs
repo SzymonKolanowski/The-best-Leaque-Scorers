@@ -45,7 +45,7 @@ namespace The_Best_Leaque_Scorers
 						ShowScorer();
 						break;
 					case "AddLeaquetoScorer":
-						AddLeaquetoScorer();
+						AddGoalId();
 						break;
 					//case "RemoveLeaqueFromScorerList":
 					//	RemoveLeaqueFromScorerList();
@@ -86,6 +86,19 @@ namespace The_Best_Leaque_Scorers
 				? parsedID
 				: 0;
 			return id;
+		}
+
+		public static int GetIntParameter2()
+		{
+			var userInput = "";
+			var parameter = -1;
+			do
+			{
+				Console.WriteLine("Type " +  "id");
+				userInput = Console.ReadLine();
+			} while (!int.TryParse(userInput, out parameter));
+
+			return parameter;
 		}
 
 		private static void AddScorer()
@@ -130,9 +143,7 @@ namespace The_Best_Leaque_Scorers
 
 			Scorer scorer = database.GetScorerById(idscorer);
 
-			//Goal goal = 
-
-			//var leaques = database.GetLeaquesNames(scorer.LeaqueId);
+			
 
 			var scorerViewModel = new
 			{
@@ -140,7 +151,7 @@ namespace The_Best_Leaque_Scorers
 				scorer.NameandSurname,
 				scorer.Nation,
 				scorer.YearofBirth,
-				//LeaqueNames = leaques
+				
 			};
 
 			WriteJson(scorerViewModel);
@@ -176,18 +187,18 @@ namespace The_Best_Leaque_Scorers
 
 			Leaque leaque = database.GetLeaqueById(idleaque);
 
-			//var scorer = database.GetScorersNames(leaque.ScorersIds);
+			
 
 			var leaqueViewModel = new
 			{
 				leaque.ID,
 				leaque.Nation,
-				//ScorersNames = scorer
+				
 			};
 			WriteJson(leaqueViewModel);
 		}
 
-		private static void AddLeaquetoScorer()
+		private static void AddGoalId()
 		{
 			Console.WriteLine("choose id of scorer");
 			var idScorer = GetIntParameter();
@@ -198,14 +209,13 @@ namespace The_Best_Leaque_Scorers
 			Console.WriteLine("Goals in this Leaque");
 			var goals = GetIntParameter();
 
+			var goal = new Goal()
+			{
+				NumberOfGoal = goals,
+				
+			};
 
-			//var scorer = database.GetScorerById(idScorer);
-			//scorer.g
-			//scorer.LeaqueId ??= new List<int>();
-			//scorer.LeaqueId.Add(idLeaque);
-
-			//scorer.NumberOfGoals ??= new List<int>();
-			//scorer.NumberOfGoals.Add(goals);
+			database.AddGoalId(goal);
 		}
 
 		//private static void AddScorertoLeaque()
