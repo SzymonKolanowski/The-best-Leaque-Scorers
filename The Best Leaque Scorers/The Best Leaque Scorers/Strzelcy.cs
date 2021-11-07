@@ -10,6 +10,7 @@ namespace The_Best_Leaque_Scorers
 		public string NameandSurname { get; set; }
 		public int YearofBirth { get; set; }
 		public string Nation { get; set; }
+        public List<int> GoalIds { get; set; }
 
 	}
 
@@ -21,9 +22,10 @@ namespace The_Best_Leaque_Scorers
 
 	public class Goal
 	{
-		public GoalId Id { get; set; }
+		public int Id { get; set; }
 		public int NumberOfGoal { get; set; }
-	}
+        public GoalId Ids { get; set; }
+    }
 
     public class GoalId : IEquatable<GoalId>
     {

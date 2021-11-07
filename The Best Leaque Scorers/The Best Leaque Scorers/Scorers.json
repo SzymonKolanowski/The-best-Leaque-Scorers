@@ -1,10 +1,14 @@
-{
+h{
   "Scorers": [
     {
       "ID": 1,
       "NameandSurname": "Robert Lewandowski",
       "YearofBirth": 1988,
-      "Nation": "Poland"
+      "Nation": "Poland",
+      "GoalIds": [
+        1,
+        6
+      ]
     }
   ],
   "Leaques": [
@@ -15,12 +19,76 @@
     {
       "ID": 2,
       "Nation": "Germany"
+    },
+    {
+      "ID": 3,
+      "Nation": "England"
+    },
+    {
+      "ID": 4,
+      "Nation": "Spain"
+    },
+    {
+      "ID": 5,
+      "Nation": "Italy"
+    },
+    {
+      "ID": 6,
+      "Nation": "Portugal"
+    },
+    {
+      "ID": 7,
+      "Nation": "France"
     }
   ],
   "Goals": [
     {
-      "Id": null,
-      "NumberOfGoal": 32
+      "Id": 1,
+      "NumberOfGoal": 32,
+      "Ids": {
+        "LeagueId": 1,
+        "ScorerId": 1
+      }
+    },
+    {
+      "Id": 2,
+      "NumberOfGoal": 3,
+      "Ids": {
+        "LeagueId": 2,
+        "ScorerId": 6
+      }
+    },
+    {
+      "Id": 3,
+      "NumberOfGoal": 88,
+      "Ids": {
+        "LeagueId": 2,
+        "ScorerId": 3
+      }
+    },
+    {
+      "Id": 4,
+      "NumberOfGoal": 311,
+      "Ids": {
+        "LeagueId": 2,
+        "ScorerId": 4
+      }
+    },
+    {
+      "Id": 5,
+      "NumberOfGoal": 81,
+      "Ids": {
+        "LeagueId": 2,
+        "ScorerId": 5
+      }
+    },
+    {
+      "Id": 6,
+      "NumberOfGoal": 290,
+      "Ids": {
+        "LeagueId": 1,
+        "ScorerId": 2
+      }
     }
   ]
 }

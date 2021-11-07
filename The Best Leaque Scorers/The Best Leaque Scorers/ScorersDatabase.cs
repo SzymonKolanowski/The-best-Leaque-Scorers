@@ -45,9 +45,9 @@ namespace The_Best_Leaque_Scorers
 			scorersandLeaques.Leaques.Add(leaque);
 		}
 
-		public void AddGoalId(Goal goal)
+		public void AddGoal(Goal goal)
 		{
-			goal.Id = scorersandLeaques.Goals.Select(g => g.Id).DefaultIfEmpty().Max() ;
+			goal.Id = scorersandLeaques.Goals.Select(g => g.Id).DefaultIfEmpty().Max() + 1 ;
 			scorersandLeaques.Goals.Add(goal);
 		}
 

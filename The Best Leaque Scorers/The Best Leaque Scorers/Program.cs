@@ -19,7 +19,7 @@ namespace The_Best_Leaque_Scorers
 				Console.WriteLine("If you want remove scorer write 'RemoveScorers'");
 				Console.WriteLine("If you want see list of scorer write 'ScorersList'");
 				Console.WriteLine("If you want see only one scorer write 'ShowScorer'");
-				Console.WriteLine("If you want add leaque to scorer list write 'AddLeaquetoScorer'");
+				Console.WriteLine("If you want add leaque to scorer list write 'AddGoal'");
 				Console.WriteLine("If you want remove leaque from scorer list write 'RemoveLeaqueFromScorerList'");
 				Console.WriteLine("If you want add leaque write 'AddLeaque'");
 				Console.WriteLine("If you want remove leaque write 'RemoveLeaques'");
@@ -44,12 +44,12 @@ namespace The_Best_Leaque_Scorers
 					case "ShowScorer":
 						ShowScorer();
 						break;
-					case "AddLeaquetoScorer":
-						AddGoalId();
+					case "AddGoal":
+						AddGoal();
 						break;
-					//case "RemoveLeaqueFromScorerList":
-					//	RemoveLeaqueFromScorerList();
-					//break;
+					case "AddGoalToScorer":
+						AddGoalToScorer();
+						break;
 					case "AddLeaque":
 						AddLeaques();
 						break;
@@ -198,7 +198,7 @@ namespace The_Best_Leaque_Scorers
 			WriteJson(leaqueViewModel);
 		}
 
-		private static void AddGoalId()
+		private static void AddGoal()
 		{
 			Console.WriteLine("choose id of scorer");
 			var idScorer = GetIntParameter();
@@ -212,27 +212,24 @@ namespace The_Best_Leaque_Scorers
 			var goal = new Goal()
 			{
 				NumberOfGoal = goals,
-				
+				Ids = new GoalId(idScorer,idLeaque)
 			};
 
-			database.AddGoalId(goal);
+			database.AddGoal(goal);
 		}
 
-		//private static void AddScorertoLeaque()
-		//{
-		//	Console.WriteLine("choose id of leaque");
-		//	var idLeaque = GetIntParameter();
+		private static void AddGoalToScorer()
+		{
+			Console.WriteLine("Choose id of scorer");
+			var idScorer = GetIntParameter();
 
-		//	Console.WriteLine("Choose id of scorer");
-		//	var idScorer = GetIntParameter();
+			Console.WriteLine("choose id of leaque");
+			var idGoal = GetIntParameter();
 
-		//	Console.WriteLine("Goals in this Leaque");
-		//	var goals = GetIntParameter();
-
-		//	var leaque = database.GetLeaqueById(idLeaque);
-		//	leaque.ScorersIds ??= new List<int>();
-		//	leaque.ScorersIds.Add(idScorer);
-		//}
+			var scorer = database.GetScorerById(idScorer);
+			scorer.GoalIds ??= new List<int>();
+			scorer.GoalIds.Add(idGoal);
+		}
 
 		//private static void RemoveLeaqueFromScorerList()
 		//{
