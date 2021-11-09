@@ -71,6 +71,11 @@ namespace The_Best_Leaque_Scorers
 			scorersandLeaques.Leaques.RemoveAll(r => id == r.ID);
 		}
 
+		public void RemoveGoals(int id)
+		{
+			scorersandLeaques.Goals.RemoveAll(g => id == g.Id);
+		}
+
 		public Scorer GetScorerById(int id)
 		{
 			return scorersandLeaques.Scorers.FirstOrDefault(a => id == a.ID);

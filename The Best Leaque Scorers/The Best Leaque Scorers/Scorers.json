@@ -1,4 +1,4 @@
-h{
+{
   "Scorers": [
     {
       "ID": 1,
@@ -7,7 +7,7 @@ h{
       "Nation": "Poland",
       "GoalIds": [
         1,
-        6
+        2
       ]
     }
   ],
@@ -44,50 +44,18 @@ h{
   "Goals": [
     {
       "Id": 1,
-      "NumberOfGoal": 32,
+      "NumberOfGoal": 290,
       "Ids": {
-        "LeagueId": 1,
-        "ScorerId": 1
+        "ScorerId": 1,
+        "LeagueId": 2
       }
     },
     {
       "Id": 2,
-      "NumberOfGoal": 3,
+      "NumberOfGoal": 32,
       "Ids": {
-        "LeagueId": 2,
-        "ScorerId": 6
-      }
-    },
-    {
-      "Id": 3,
-      "NumberOfGoal": 88,
-      "Ids": {
-        "LeagueId": 2,
-        "ScorerId": 3
-      }
-    },
-    {
-      "Id": 4,
-      "NumberOfGoal": 311,
-      "Ids": {
-        "LeagueId": 2,
-        "ScorerId": 4
-      }
-    },
-    {
-      "Id": 5,
-      "NumberOfGoal": 81,
-      "Ids": {
-        "LeagueId": 2,
-        "ScorerId": 5
-      }
-    },
-    {
-      "Id": 6,
-      "NumberOfGoal": 290,
-      "Ids": {
-        "LeagueId": 1,
-        "ScorerId": 2
+        "ScorerId": 1,
+        "LeagueId": 1
       }
     }
   ]

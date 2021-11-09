@@ -29,14 +29,15 @@ namespace The_Best_Leaque_Scorers
 
     public class GoalId : IEquatable<GoalId>
     {
-        public GoalId(int leagueId, int scorerId)
+        public GoalId( int scorerId, int leagueId)
         {
-            LeagueId = leagueId;
             ScorerId = scorerId;
+            LeagueId = leagueId;            
         }
 
-        public int LeagueId { get; private set; }
+       
         public int ScorerId { get; private set; }
+        public int LeagueId { get; private set; }
 
         public bool Equals(GoalId other)
         {
