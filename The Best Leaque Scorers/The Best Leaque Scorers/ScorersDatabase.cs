@@ -86,24 +86,35 @@ namespace The_Best_Leaque_Scorers
 			return scorersandLeaques.Leaques.FirstOrDefault(a => id == a.ID);
 		}
 
-		public IEnumerable<string> GetScorersNames(IEnumerable<int> idScorers)
-		{
-			if (idScorers == null)
-			{
-				return Enumerable.Empty<string>();
-			}
-			return scorersandLeaques.Scorers.Where(s => idScorers.Any(id => id == s.ID)).
-				Select(s => s.NameandSurname);
-		}
+		//public IEnumerable<string> GetScorersNames(IEnumerable<int> idScorers)
+		//{
+		//	if (idScorers == null)
+		//	{
+		//		return Enumerable.Empty<string>();
+		//	}
+		//	return scorersandLeaques.Scorers.Where(s => idScorers.Any(id => id == s.ID)).
+		//		Select(s => s.NameandSurname);
+		//}
 
-		public IEnumerable<string> GetLeaquesNames(IEnumerable<int> idLeaque)
-		{
-			if (idLeaque == null)
-			{
-				return Enumerable.Empty<string>();
-			}
-			return scorersandLeaques.Leaques.Where(l => idLeaque.Any(id => id == l.ID)).
-				Select(l => l.Nation);
-		}
+		//public IEnumerable<string> GetLeaquesNames(IEnumerable<int> idLeaque)
+		//{
+		//	if (idLeaque == null)
+		//	{
+		//		return Enumerable.Empty<string>();
+		//	}
+		//	return scorersandLeaques.Leaques.Where(l => idLeaque.Any(id => id == l.ID)).
+		//		Select(l => l.Nation);
+		//}
+
+		//public IEnumerable<string> GetGoalNames(IEnumerable<int> idGoal)
+		//{
+		//	//if (idGoal == null)
+		//	//{
+		//	//	return Enumerable.Empty<int>();
+		//	//}
+		//	return scorersandLeaques.Goals.Where(g => idGoal.Any(id => id == g.Id)).
+		//		Select(g => g.NumberOfGoal);
+			
+		//}
 	}
 }

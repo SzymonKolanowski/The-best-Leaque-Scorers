@@ -18,7 +18,8 @@ namespace The_Best_Leaque_Scorers
 	{
 		public int ID { get; set; }
 		public string Nation { get; set; }
-	}
+        public List<int> GoalIds { get; set; }
+    }
 
 	public class Goal
 	{

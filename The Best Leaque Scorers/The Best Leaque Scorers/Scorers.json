@@ -9,36 +9,67 @@
         1,
         2
       ]
+    },
+    {
+      "ID": 2,
+      "NameandSurname": "Cristiano Ronaldo",
+      "YearofBirth": 1985,
+      "Nation": "Portugal",
+      "GoalIds": [
+        3,
+        4,
+        5,
+        6
+      ]
     }
   ],
   "Leaques": [
     {
       "ID": 1,
-      "Nation": "Poland"
+      "Nation": "Poland",
+      "GoalIds": [
+        2
+      ]
     },
     {
       "ID": 2,
-      "Nation": "Germany"
+      "Nation": "Germany",
+      "GoalIds": [
+        1
+      ]
     },
     {
       "ID": 3,
-      "Nation": "England"
+      "Nation": "England",
+      "GoalIds": [
+        3
+      ]
     },
     {
       "ID": 4,
-      "Nation": "Spain"
+      "Nation": "Spain",
+      "GoalIds": [
+        4
+      ]
     },
     {
       "ID": 5,
-      "Nation": "Italy"
+      "Nation": "Italy",
+      "GoalIds": [
+        5
+      ]
     },
     {
       "ID": 6,
-      "Nation": "Portugal"
+      "Nation": "Portugal",
+      "GoalIds": [
+        6
+      ]
     },
     {
       "ID": 7,
-      "Nation": "France"
+      "Nation": "France",
+      "GoalIds": null
     }
   ],
   "Goals": [
@@ -56,6 +87,38 @@
       "Ids": {
         "ScorerId": 1,
         "LeagueId": 1
+      }
+    },
+    {
+      "Id": 3,
+      "NumberOfGoal": 88,
+      "Ids": {
+        "ScorerId": 2,
+        "LeagueId": 3
+      }
+    },
+    {
+      "Id": 4,
+      "NumberOfGoal": 311,
+      "Ids": {
+        "ScorerId": 2,
+        "LeagueId": 4
+      }
+    },
+    {
+      "Id": 5,
+      "NumberOfGoal": 81,
+      "Ids": {
+        "ScorerId": 2,
+        "LeagueId": 5
+      }
+    },
+    {
+      "Id": 6,
+      "NumberOfGoal": 3,
+      "Ids": {
+        "ScorerId": 2,
+        "LeagueId": 6
       }
     }
   ]
