@@ -28,6 +28,7 @@ namespace The_Best_Leaque_Scorers
 				Console.WriteLine("if you want add goal Id to Leaque list write 'AddGoaltoLeaque'");
 				Console.WriteLine("if you want remove goal Id from scorer list write 'RemoveGoalIdFromScorerList'");
 				Console.WriteLine("if you want remove goal Id from leaque list write 'RemoveGoalIdFromLeaqueList'");
+				Console.WriteLine("if you want see only one goal id write 'ShowGoalId'");
 				
 				command = Console.ReadLine();
 
@@ -72,6 +73,9 @@ namespace The_Best_Leaque_Scorers
 						break;
 					case "RemoveGoalIdFromLeaqueList":
 						RemoveGoalIdFromLeaqueList();
+						break;
+					case "ShowGoalId":
+						ShowGoalId();
 						break;
 
 
@@ -156,7 +160,7 @@ namespace The_Best_Leaque_Scorers
 
 			var scorerViewModel = new
 			{
-				scorer.ID,
+				//scorer.ID,
 				scorer.NameandSurname,
 				scorer.Nation,
 				scorer.YearofBirth,
@@ -201,12 +205,32 @@ namespace The_Best_Leaque_Scorers
 
 			var leaqueViewModel = new
 			{
-				leaque.ID,
+				//leaque.ID,
 				leaque.Nation,
 				leaque.GoalIds
 				
 			};
 			WriteJson(leaqueViewModel);
+		}
+
+		private static void ShowGoalId()
+		{
+			Console.WriteLine("Choose goal Id which you want to see");
+
+			var idGoal = GetIntParameter();
+
+			Goal goal = database.GetGoalById(idGoal);
+
+			var goalViewModel = new
+			{
+				//goal.Id,
+				goal.NumberOfGoal,
+				goal.Ids
+			};
+
+			WriteJson(goalViewModel);
+
+
 		}
 
 		private static void AddGoal()

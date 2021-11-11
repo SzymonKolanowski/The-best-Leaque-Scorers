@@ -28,10 +28,6 @@ namespace The_Best_Leaque_Scorers
 			return scorersandLeaques.Scorers;
 		}
 
-		public IEnumerable<Leaque> LeaqueList()
-		{
-			return scorersandLeaques.Leaques;
-		}
 
 		public void AddScorers(Scorer scorer)
 		{
@@ -84,6 +80,11 @@ namespace The_Best_Leaque_Scorers
 		public Leaque GetLeaqueById(int id)
 		{
 			return scorersandLeaques.Leaques.FirstOrDefault(a => id == a.ID);
+		}
+
+		public Goal GetGoalById(int id)
+		{
+			return scorersandLeaques.Goals.FirstOrDefault(a => id == a.Id);
 		}
 
 		//public IEnumerable<string> GetScorersNames(IEnumerable<int> idScorers)
