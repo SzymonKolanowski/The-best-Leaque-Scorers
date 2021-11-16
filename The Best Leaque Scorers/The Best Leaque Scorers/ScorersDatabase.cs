@@ -87,15 +87,15 @@ namespace The_Best_Leaque_Scorers
 			return scorersandLeaques.Goals.FirstOrDefault(a => id == a.Id);
 		}
 
-		//public IEnumerable<string> GetScorersNames(IEnumerable<int> idScorers)
-		//{
-		//	if (idScorers == null)
-		//	{
-		//		return Enumerable.Empty<string>();
-		//	}
-		//	return scorersandLeaques.Scorers.Where(s => idScorers.Any(id => id == s.ID)).
-		//		Select(s => s.NameandSurname);
-		//}
+		public IEnumerable<string> GetScorersNames(IEnumerable<int> idScorers)
+		{
+			if (idScorers == null)
+			{
+				return Enumerable.Empty<string>();
+			}
+			return scorersandLeaques.Scorers.Where(s => idScorers.Any(id => id == s.ID)).
+				Select(s => s.NameandSurname);
+		}
 
 		//public IEnumerable<string> GetLeaquesNames(IEnumerable<int> idLeaque)
 		//{
@@ -115,7 +115,12 @@ namespace The_Best_Leaque_Scorers
 		//	//}
 		//	return scorersandLeaques.Goals.Where(g => idGoal.Any(id => id == g.Id)).
 		//		Select(g => g.NumberOfGoal);
-			
+
+		//}
+
+		//public void AddNextGoals(Goal goal, int goals)
+		//{
+		//	goal.Id[goals] = 
 		//}
 	}
 }

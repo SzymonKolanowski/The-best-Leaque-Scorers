@@ -221,9 +221,9 @@ namespace The_Best_Leaque_Scorers
 
 			Goal goal = database.GetGoalById(idGoal);
 
+			
 			var goalViewModel = new
 			{
-				//goal.Id,
 				goal.NumberOfGoal,
 				goal.Ids
 			};

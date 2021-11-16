@@ -12,6 +12,29 @@ namespace The_Best_Leaque_Scorers
 		public string Nation { get; set; }
         public List<int> GoalIds { get; set; }
 
+		//       public Dictionary<NumberOfGoals,int> Goals { get; }
+		//       public Scorer()
+		//       {
+		//           Goals = new Dictionary<NumberOfGoals, int>
+		//           {
+		//               [NumberOfGoals.Id] = 0,
+		//           };
+		//       }
+
+		//public int TotalGoals
+		//{
+		//	get
+		//	{
+		//		return 
+
+		//	}
+		//}
+
+		//}
+
+		//   public enum NumberOfGoals
+		//   {
+
 	}
 
 	public class Leaque
