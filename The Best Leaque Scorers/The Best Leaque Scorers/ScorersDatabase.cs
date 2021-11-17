@@ -97,30 +97,30 @@ namespace The_Best_Leaque_Scorers
 				Select(s => s.NameandSurname);
 		}
 
-		//public IEnumerable<string> GetLeaquesNames(IEnumerable<int> idLeaque)
-		//{
-		//	if (idLeaque == null)
-		//	{
-		//		return Enumerable.Empty<string>();
-		//	}
-		//	return scorersandLeaques.Leaques.Where(l => idLeaque.Any(id => id == l.ID)).
-		//		Select(l => l.Nation);
-		//}
+		public IEnumerable<string> GetLeaquesNames(IEnumerable<int> idLeaque)
+		{
+			if (idLeaque == null)
+			{
+				return Enumerable.Empty<string>();
+			}
+			return scorersandLeaques.Leaques.Where(l => idLeaque.Any(id => id == l.ID)).
+				Select(l => l.Nation);
+		}
 
 		//public IEnumerable<string> GetGoalNames(IEnumerable<int> idGoal)
 		//{
-		//	//if (idGoal == null)
-		//	//{
-		//	//	return Enumerable.Empty<int>();
-		//	//}
+		//	if (idGoal == null)
+		//	{
+		//		return Enumerable.Empty<string>();
+		//	}
 		//	return scorersandLeaques.Goals.Where(g => idGoal.Any(id => id == g.Id)).
 		//		Select(g => g.NumberOfGoal);
 
-		//}
+			//}
 
-		//public void AddNextGoals(Goal goal, int goals)
-		//{
-		//	goal.Id[goals] = 
-		//}
-	}
+			//public void AddNextGoals(Goal goal, int goals)
+			//{
+			//	goal.Id[goals] = 
+			//}
+		}
 }
