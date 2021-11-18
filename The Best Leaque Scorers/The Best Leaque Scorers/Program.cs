@@ -158,6 +158,8 @@ namespace The_Best_Leaque_Scorers
 
 			var leaque = database.GetLeaquesNames(scorer.GoalIds);
 
+			var goals = database.GetGoalNames(scorer.GoalIds);
+
 			var scorerViewModel = new
 			{
 				//scorer.ID,
@@ -165,7 +167,8 @@ namespace The_Best_Leaque_Scorers
 				scorer.Nation,
 				scorer.YearofBirth,
 				//scorer.GoalIds
-				LeaqueNames = leaque
+				LeaqueNames = leaque,
+				Goals = goals
 			};
 
 			WriteJson(scorerViewModel);
@@ -203,14 +206,13 @@ namespace The_Best_Leaque_Scorers
 
 			var scorer = database.GetScorersNames(leaque.GoalIds);
 
-		
+			var goal = database.GetGoalNames(leaque.GoalIds);		
 
 			var leaqueViewModel = new
 			{
-				//leaque.ID,
-				leaque.Nation,
-				//leaque.GoalIds
-				ScorerNames = scorer
+				leaque.Nation,				
+				ScorerNames = scorer,
+				Gol = goal
 				
 			};
 			WriteJson(leaqueViewModel);
@@ -224,7 +226,7 @@ namespace The_Best_Leaque_Scorers
 
 			Goal goal = database.GetGoalById(idGoal);
 
-			//var scorer = database.GetScorersNames(goal.NumberOfGoal);
+			//var scorer = database.GetScorersNames(goal.Ids.ScorerId);
 
 			var goalViewModel = new
 			{
@@ -233,8 +235,6 @@ namespace The_Best_Leaque_Scorers
 			};
 
 			WriteJson(goalViewModel);
-
-
 		}
 
 		private static void AddGoal()

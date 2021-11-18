@@ -31,6 +31,15 @@
         7,
         8
       ]
+    },
+    {
+      "ID": 4,
+      "NameandSurname": "Kylian Mbappe",
+      "YearofBirth": 1998,
+      "Nation": "France",
+      "GoalIds": [
+        9
+      ]
     }
   ],
   "Leaques": [
@@ -81,7 +90,8 @@
       "ID": 7,
       "Nation": "France",
       "GoalIds": [
-        8
+        8,
+        9
       ]
     }
   ],
@@ -147,6 +157,14 @@
       "NumberOfGoal": 0,
       "Ids": {
         "ScorerId": 3,
+        "LeagueId": 7
+      }
+    },
+    {
+      "Id": 9,
+      "NumberOfGoal": 113,
+      "Ids": {
+        "ScorerId": 4,
         "LeagueId": 7
       }
     }

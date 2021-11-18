@@ -107,20 +107,19 @@ namespace The_Best_Leaque_Scorers
 				Select(l => l.Nation);
 		}
 
-		//public IEnumerable<string> GetGoalNames(IEnumerable<int> idGoal)
-		//{
-		//	if (idGoal == null)
-		//	{
-		//		return Enumerable.Empty<string>();
-		//	}
-		//	return scorersandLeaques.Goals.Where(g => idGoal.Any(id => id == g.Id)).
-		//		Select(g => g.NumberOfGoal);
-
-			//}
-
-			//public void AddNextGoals(Goal goal, int goals)
-			//{
-			//	goal.Id[goals] = 
-			//}
+		public IEnumerable<int> GetGoalNames(IEnumerable<int> idGoal)
+		{
+			if (idGoal == null)
+			{
+				return Enumerable.Empty<int>();
+			}
+			return scorersandLeaques.Goals.Where(g => idGoal.Any(id => id == g.Id)).
+				Select(g => g.NumberOfGoal);
 		}
+
+		//public void AddNextGoals(Goal goal, int goals)
+		//{
+		//	goal.Id[goals] = 
+		//}
+	}
 }
