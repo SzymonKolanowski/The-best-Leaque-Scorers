@@ -44,8 +44,8 @@ namespace The_Best_Leaque_Scorers
 		//public void IncrementGoals(GoalId goalId)
 		//{
 		//	//goal.Id = scorersandLeaques.Goals.Select(g => g.Id).DefaultIfEmpty().Max() + 1 ;
-		//	go
-		//	scorersandLeaques.Goals.Add(goalId);
+		//	goalId.ScorerId  = scorersandLeaques.Goals.Select(g => g.NumberOfGoal).DefaultIfEmpty().Max() + 1;
+		//	scorersandLeaques.Goals.Add(GoalId(goalId));
 		//}
 
 		public void SaveScorers()
@@ -98,25 +98,25 @@ namespace The_Best_Leaque_Scorers
 				Select(s => s.NameandSurname);
 		}
 
-		public IEnumerable<string> GetLeaquesNames(IEnumerable<int> idLeaque)
+		public IEnumerable<Leaque> LeaqueList(IEnumerable<int> idLeaque)
 		{
 			if (idLeaque == null)
 			{
-				return Enumerable.Empty<string>();
+				return Enumerable.Empty<Leaque>();
 			}
-			return scorersandLeaques.Leaques.Where(l => idLeaque.Any(id => id == l.ID)).
+			return (IEnumerable<Leaque>)scorersandLeaques.Leaques.Where(l => idLeaque.Any(id => id == l.ID)).
 				Select(l => l.Nation);
 		}
 
-		//public IEnumerable<int> GetGoalNames(IEnumerable<int> idGoal)
-		//{
-		//	if (idGoal == null)
-		//	{
-		//		return Enumerable.Empty<int>();
-		//	}
-		//	return scorersandLeaques.Goals.Where(g => idGoal.Any(id => id == g.Id)).
-		//		Select(g => g.NumberOfGoal);
-		//}
+		public IEnumerable<Goal> GetGoalByScoresIdIe(IEnumerable<int> idScorers)
+		{
+			if (idScorers == null)
+			{
+				return Enumerable.Empty<Goal>();
+			}
+			return scorersandLeaques.Goals.Where(g => idScorers.Any(id => id == g.Ids)).
+				
+		}
 
 		//public void AddNextGoals(Goal goal, int goals)
 		//{
