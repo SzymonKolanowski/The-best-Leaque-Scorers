@@ -50,9 +50,9 @@ namespace The_Best_Leaque_Scorers
 					case "AddGoal":
 						AddGoal();
 						break;
-					case "RemoveGoals":
-						RemoveGoals();
-						break;
+					//case "RemoveGoals":
+					//	RemoveGoals();
+					//	break;
 					case "AddGoalToScorer":
 						AddGoalToScorer();
 						break;
@@ -156,9 +156,9 @@ namespace The_Best_Leaque_Scorers
 
 			Scorer scorer = database.GetScorerById(idscorer);
 
-			var leaque = database.GetLeaquesNames(scorer.GoalIds);
+			//var leaque = database.GetLeaquesNames(scorer.GoalIds);
 
-			var goals = database.GetGoalNames(scorer.GoalIds);
+			//var goals = database.GetGoalNames(scorer.GoalIds);
 
 			var scorerViewModel = new
 			{
@@ -167,8 +167,8 @@ namespace The_Best_Leaque_Scorers
 				scorer.Nation,
 				scorer.YearofBirth,
 				//scorer.GoalIds
-				LeaqueNames = leaque,
-				Goals = goals
+				//LeaqueNames = leaque,
+				//Goals = goals
 			};
 
 			WriteJson(scorerViewModel);
@@ -204,15 +204,15 @@ namespace The_Best_Leaque_Scorers
 
 			Leaque leaque = database.GetLeaqueById(idleaque);
 
-			var scorer = database.GetScorersNames(leaque.GoalIds);
+			//var scorer = database.GetScorersNames(leaque.GoalIds);
 
-			var goal = database.GetGoalNames(leaque.GoalIds);		
+			//var goal = database.GetGoalNames(leaque.GoalIds);		
 
 			var leaqueViewModel = new
 			{
 				leaque.Nation,				
-				ScorerNames = scorer,
-				Gol = goal
+				//ScorerNames = scorer,
+				//Gol = goal
 				
 			};
 			WriteJson(leaqueViewModel);
@@ -224,13 +224,13 @@ namespace The_Best_Leaque_Scorers
 
 			var idGoal = GetIntParameter();
 
-			Goal goal = database.GetGoalById(idGoal);
+			//Goal goal = database.GetGoalById(idGoal);
 
 			//var scorer = database.GetScorersNames(goal.Ids.ScorerId);
 
 			var goalViewModel = new
 			{
-				goal.NumberOfGoal,
+				//goal.NumberOfGoal,
 				//goal.Ids
 			};
 
@@ -254,16 +254,16 @@ namespace The_Best_Leaque_Scorers
 				Ids = new GoalId(idScorer,idLeaque)
 			};
 
-			database.AddGoal(goal);
+			database.IncrementGoals(goal);
 		}
 
-		private static void RemoveGoals()
-		{
-			Console.WriteLine("Choose Id of goal which you want to remove");
-			var idGoal = GetIntParameter();
+		//private static void RemoveGoals()
+		//{
+		//	Console.WriteLine("Choose Id of goal which you want to remove");
+		//	var idGoal = GetIntParameter();
 
-			database.RemoveGoals(idGoal);
-		}
+		//	database.RemoveGoals(idGoal);
+		//}
 
 		private static void AddGoalToScorer()
 		{
@@ -274,8 +274,8 @@ namespace The_Best_Leaque_Scorers
 			var idGoal = GetIntParameter();
 
 			var scorer = database.GetScorerById(idScorer);
-			scorer.GoalIds ??= new List<int>();
-			scorer.GoalIds.Add(idGoal);
+			//scorer.GoalIds ??= new List<int>();
+			//scorer.GoalIds.Add(idGoal);
 		}
 
 		private static void AddGoalToLeaque()
@@ -287,8 +287,8 @@ namespace The_Best_Leaque_Scorers
 			var idGoal = GetIntParameter();
 
 			var leaque = database.GetLeaqueById(idLeaque);
-			leaque.GoalIds ??= new List<int>();
-			leaque.GoalIds.Add(idGoal);
+			//leaque.GoalIds ??= new List<int>();
+			//leaque.GoalIds.Add(idGoal);
 		}
 		
 		private static void RemoveGoalIdFromScorerList()
@@ -300,7 +300,7 @@ namespace The_Best_Leaque_Scorers
 			var idGoal = GetIntParameter();
 
 			var scorer = database.GetScorerById(idScorer);
-			scorer.GoalIds.Remove(idGoal);
+			//scorer.GoalIds.Remove(idGoal);
 		}
 
 		private static void RemoveGoalIdFromLeaqueList()
@@ -312,7 +312,7 @@ namespace The_Best_Leaque_Scorers
 			var idGoal = GetIntParameter();
 
 			var leaque = database.GetLeaqueById(idLeaque);
-			leaque.GoalIds.Remove(idGoal);
+			//leaque.GoalIds.Remove(idGoal);
 		}
 
 	}
