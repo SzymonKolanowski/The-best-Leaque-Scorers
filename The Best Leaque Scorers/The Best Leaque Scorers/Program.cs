@@ -254,7 +254,7 @@ namespace The_Best_Leaque_Scorers
 				Ids = new GoalId(idScorer,idLeaque)
 			};
 
-			database.IncrementGoals(goal);
+			//database.IncrementGoals(goal);
 		}
 
 		//private static void RemoveGoals()

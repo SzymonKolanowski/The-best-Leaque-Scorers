@@ -41,12 +41,11 @@ namespace The_Best_Leaque_Scorers
 			scorersandLeaques.Leaques.Add(leaque);
 		}
 
-		//public void IncrementGoals(GoalId goalId)
-		//{
-		//	//goal.Id = scorersandLeaques.Goals.Select(g => g.Id).DefaultIfEmpty().Max() + 1 ;
-		//	goalId.ScorerId  = scorersandLeaques.Goals.Select(g => g.NumberOfGoal).DefaultIfEmpty().Max() + 1;
-		//	scorersandLeaques.Goals.Add(GoalId(goalId));
-		//}
+		public void IncrementGoals(GoalId goalId)
+		{
+			//goal.Id = scorersandLeaques.Goals.Select(g => g.Id).DefaultIfEmpty().Max() + 1 ;
+			goalId = scorersandLeaques.Goals.Select(g = g.ID).
+		}
 
 		public void SaveScorers()
 		{
@@ -108,13 +107,14 @@ namespace The_Best_Leaque_Scorers
 				Select(l => l.Nation);
 		}
 
-		public IEnumerable<Goal> GetGoalByScoresIdIe(IEnumerable<int> idScorers)
+		public IEnumerable<Goal> GetGoalByScoresId(IEnumerable<int> idScorers)
 		{
 			if (idScorers == null)
 			{
 				return Enumerable.Empty<Goal>();
 			}
-			return scorersandLeaques.Goals.Where(g => idScorers.Any(id => id == g.Ids)).
+			return (IEnumerable<Goal>)scorersandLeaques.Goals.Where(g => idScorers.Any(id => id == g.NumberOfGoal)).
+				Select(g => g.NumberOfGoal);
 				
 		}
 
