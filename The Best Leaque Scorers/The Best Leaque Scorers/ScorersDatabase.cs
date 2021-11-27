@@ -44,7 +44,8 @@ namespace The_Best_Leaque_Scorers
 		public void IncrementGoals(GoalId goalId)
 		{
 			//goal.Id = scorersandLeaques.Goals.Select(g => g.Id).DefaultIfEmpty().Max() + 1 ;
-			goalId.LeagueId = scorersandLeaques.Goals.Select(g => g.NumberOfGoal).DefaultIfEmpty().Max() + 1;
+			//goalId.LeagueId = scorersandLeaques.Goals.Select(g => g.NumberOfGoal).DefaultIfEmpty().Max() + 1;
+
 		}
 
 		public void SaveScorers()
